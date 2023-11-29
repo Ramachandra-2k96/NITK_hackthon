@@ -7,17 +7,70 @@
     <title>Login</title>
     <style>
         *,
-        *:before,
-        *:after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
+    *:before,
+    *:after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+        background: #ffffff;
+    }
+
+    /* Add responsive styles */
+    @media only screen and (max-width: 768px) {
+        .cont {
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
         }
 
-        body {
-            font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-            background: #ffffff;
+        .form {
+            width: 100%;
+            padding: 30px;
         }
+
+        .sub-cont {
+            width: 100%;
+            padding-left: 0;
+        }
+
+        .img {
+            width: 100%;
+            height: auto;
+            padding-top: 60%; /* Adjust the padding to your preference */
+        }
+
+        .img:before {
+            width: 100%;
+        }
+
+        .img__text {
+            top: 20px;
+            padding: 0 10px;
+        }
+
+        .img__btn {
+            width: 80px;
+            height: 30px;
+            font-size: 12px;
+        }
+
+        label {
+            width: 100%;
+            margin: 15px auto 0;
+        }
+
+        input {
+            width: 100%;
+        }
+
+        .forgot-pass {
+            margin-top: 10px;
+        }
+    }
 
         /* Reset default styles */
         input,
@@ -334,6 +387,8 @@
             -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
         }
+
+        
     </style>
 </head>
 <body style="background-image: url('{% static 'backg.jpg' %}');
@@ -397,11 +452,11 @@
                         {{signup_form.password1}}
                     </label>
                     <label>
-                        <span>Password</span>
+                        <span>Re-Enter Password</span>
                         {{signup_form.password2}}
                     </label>
                     <label>
-                        <span>Your Name</span>
+                        <span>Name</span>
                         {{signup_form.first_name}}
                     </label>
                     <button type="submit" class="submit" name="signup-submit">Sign Up</button>

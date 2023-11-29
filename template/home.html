@@ -1,16 +1,66 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        <a href="{% url 'logout' %}">Logout</a>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <script src="" async defer></script>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <style>
+        /* Custom styles can be added here */
+    </style>
+    <title>GitHub Home</title>
+</head>
+<body class="font-sans bg-gray-100">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-gray-900 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="text-2xl font-bold">GitHub</div>
+
+            </div>
+            <div class="flex items-center">
+                <input type="text" class="lg:px-3 py-2 rounded-md" placeholder="Search...">
+                <a href="{% url 'logout' %}" class="ml-4">Log out</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Profile Menu -->
+    <div class="bg-gray-900 text-white">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <a href="#" class="flex items-center">
+                <img src="avatar.jpg" alt="Profile Picture" class="w-8 h-8 rounded-full mr-2">
+                <div>
+                    <div class="font-bold">Your Name</div>
+                    <div class="text-sm">username</div>
+                </div>
+            </a>
+            <div class="ml-4 hidden lg:flex">
+                <a href="#" class="ml-4">Chat</a>
+                <a href="#" class="ml-4">Resourse Share</a>
+                <a href="#" class="ml-4">Meet</a>
+                <a href="#" class="ml-4">Connect with People</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Navigation Menu (hidden by default) -->
+    <div class="lg:hidden bg-gray-900 text-white p-4">
+        <a href="#" class="block text-white">Pull requests</a>
+        <a href="#" class="block text-white mt-2">Issues</a>
+        <a href="#" class="block text-white mt-2">Marketplace</a>
+        <a href="#" class="block text-white mt-2">Explore</a>
+    </div>
+
+    <!-- Content -->
+    <div class="container mx-auto py-8">
+        <!-- Your main content goes here -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-4">
+        <p>&copy; 2023 GitHub. All rights reserved.</p>
+    </footer>
+
+</body>
 </html>
