@@ -7,7 +7,7 @@
     <style>
         /* Custom styles can be added here */
     </style>
-    <title>GitHub Home</title>
+    <title>Home</title>
 </head>
 <body class="font-sans bg-gray-100">
 
@@ -15,11 +15,10 @@
     <nav class="bg-gray-900 text-white p-4">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center">
-                <div class="text-2xl font-bold">GitHub</div>
+                <div class="text-2xl font-bold">Infinity</div>
 
             </div>
             <div class="flex items-center">
-                <input type="text" class="lg:px-3 py-2 rounded-md" placeholder="Search...">
                 <a href="{% url 'logout' %}" class="ml-4">Log out</a>
             </div>
         </div>
@@ -36,9 +35,10 @@
                 </div>
             </a>
             <div class="ml-4 hidden lg:flex">
+                <input type="text" class="lg:px-3 py-2 text-black rounded-md" placeholder="Search...">
                 <a href="#" class="ml-4">Chat</a>
                 <a href="#" class="ml-4">Resourse Share</a>
-                <a href="#" class="ml-4">Meet</a>
+                <a href="{% url 'meet' %}" class="ml-4">Meet</a>
                 <a href="#" class="ml-4">Connect with People</a>
             </div>
         </div>
@@ -46,17 +46,14 @@
 
     <!-- Mobile Navigation Menu (hidden by default) -->
     <div class="lg:hidden bg-gray-900 text-white p-4">
-        <a href="#" class="block text-white">Pull requests</a>
-        <a href="#" class="block text-white mt-2">Issues</a>
-        <a href="#" class="block text-white mt-2">Marketplace</a>
-        <a href="#" class="block text-white mt-2">Explore</a>
+        <input type="text" class="lg:px-3 py-2 text-black rounded-md" placeholder="Search...">
+        <a href="#" class="block text-white">Chat</a>
+        <a href="#" class="block text-white mt-2">Resourse Share</a>
+        <a href="{% url 'meet' %}" class="block text-white mt-2">Meet</a>
+        <a href="#" class="block text-white mt-2">Connect with People</a>
     </div>
-
-    <!-- Content -->
     <div class="container mx-auto py-8">
-        <!-- Your main content goes here -->
     </div>
-
     <!-- Footer -->
     <footer class="bg-gray-800 text-white text-center py-4">
         <p>&copy; 2023 GitHub. All rights reserved.</p>

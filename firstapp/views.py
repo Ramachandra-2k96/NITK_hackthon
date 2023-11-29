@@ -51,6 +51,10 @@ def custom_login(request):
 @login_required
 def home(request):
     return render(request,'home.html')
+@login_required
+def meet(request):
+    user =request.user
+    return render(request,'WEB_UIKITS.html',{'username':user.first_name})
 
 @login_required
 def Custom_logout(request):
